@@ -3,6 +3,9 @@ console.log("Hello, World!");
 import express from "express";
 import routerEquipos from "./routes/equipos.js";
 import cors from "cors";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 
@@ -26,7 +29,7 @@ app.get("/api/equipos", (req, res) => {
 });
 */
 //levantar servidor
-
-app.listen(3000, () => {
-  console.log("Servidor levantado en el puerto 3000");
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Servidor levantado en el puerto ${PORT}`);
 });
