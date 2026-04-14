@@ -16,7 +16,7 @@ app.use(cors());
 app.use("/api/equipos", routerEquipos);
 
 app.get("/", (req, res) => {
-  res.send("peticion recibida");
+  res.send("peticion recibida " + process.env.EJEMPLO);
 });
 
 /*
